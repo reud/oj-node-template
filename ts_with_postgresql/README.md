@@ -1,0 +1,40 @@
+# Node.js テンプレート
+
+## 構成
+- Node.js(JavaScript)
+- PostgreSQL(Sequelize)
+
+## ディレクトリ構造
+- config 設定ファイル
+  - db_config.ts データベース接続情報を記述
+- lib モジュール・プラグイン類
+  - log ログ関連
+    - logger.ts log4jsを用いてロギングするためのモジュール
+- log ログデータ
+  - access 全アクセス履歴を格納
+  - system システム関係のログを格納
+  - error エラー関係のログを格納
+- migrations Sequelizeのmigrateデータ
+- models Sequelizeのmodelデータ
+- routes ハンドラー
+  - health.ts GET /health エンドポイントのハンドラー
+- seeders Sequelizeのseedデータ
+- index.ts 起動スクリプト
+
+## セットアップ
+
+- Sequelize-CLIがインストールされていること
+  - `npm install -g sequelize-cli`
+  
+
+- 
+
+## ESLintのルールについて
+Airbnbコード規約をベースに、以下のルールを無効化
+
+- linebreak-style
+- camelcase
+- prefer-destructuring
+- no-param-reassign
+- no-await-in-loop
+- no-async-promise-executor
